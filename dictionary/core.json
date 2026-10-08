@@ -1,0 +1,1298 @@
+{
+  "$schema": "./schema.json",
+  "version": "0.3.0",
+  "note": "Layer 0 (semantic primes, after NSM) and Layer 1 (core roots). Every entry: glyph, class, gloss (en/tr), layer, transparency, optional notes. Transparency: transparent = guessable cold; translucent = obvious once told; opaque = arbitrary, allowed only for a capped set of grammar particles.",
+  "entries": [
+    {
+      "glyph": "🔷",
+      "class": "particle",
+      "en": "[sentence end]",
+      "tr": "[cümle sonu]",
+      "layer": 0,
+      "transparency": "opaque",
+      "notes": "The only delimiter. One sentence per line is house style; a line wrap can never break a sentence."
+    },
+    {
+      "glyph": "💬",
+      "class": "particle",
+      "en": "[says]",
+      "tr": "[der]",
+      "layer": 0,
+      "transparency": "transparent",
+      "notes": "Closes a speaker label: 🐟💬 = the fish says. Scopes to the end of the sentence. Also the root WORDS, always first in a compound; as a label closer it is always last, so the two never collide."
+    },
+    {
+      "glyph": "🏷️",
+      "class": "particle",
+      "en": "[name follows]",
+      "tr": "[özel ad]",
+      "layer": 0,
+      "transparency": "translucent",
+      "notes": "A cartouche; the text after it is a proper name in any script, read as one word. Prefix a category glyph so a reader who cannot read the script still knows what kind of thing it is: 👤🏷️Mehmet person, 📍🏷️İstanbul place, 👥🏷️Anthropic group, 📦🏷️Transformer thing, 🐾🏷️Karabaş animal. A name used more than twice is bound once at the top of the document: 👦 ≔ 👤🏷️Mehmet. Never translate a name."
+    },
+    {
+      "glyph": "≔",
+      "class": "particle",
+      "en": "[define]",
+      "tr": "[tanımla]",
+      "layer": 0,
+      "transparency": "translucent",
+      "notes": "Declares a Layer 2 word: 🤖 ≔ 🏷️Transformer. Math script."
+    },
+    {
+      "glyph": "📜",
+      "class": "particle",
+      "en": "[the idea of]",
+      "tr": "[-lik, -lık]",
+      "layer": 0,
+      "transparency": "translucent",
+      "notes": "Determinative, Egyptian style: 🧠📈📜 = learning (the abstraction). Chips at the abstract-vocabulary wall."
+    },
+    {
+      "glyph": "🟡",
+      "class": "particle",
+      "en": "we think",
+      "tr": "sanıyoruz",
+      "layer": 0,
+      "transparency": "translucent",
+      "notes": "Confidence opener. Unmarked = asserted. Shorthand for 🙋💭💬."
+    },
+    {
+      "glyph": "🔴",
+      "class": "particle",
+      "en": "we guess",
+      "tr": "tahminimiz",
+      "layer": 0,
+      "transparency": "translucent",
+      "notes": "Confidence opener. Speculation."
+    },
+    {
+      "glyph": "➡️",
+      "class": "linker",
+      "en": "so / therefore",
+      "tr": "bu yüzden",
+      "layer": 0,
+      "transparency": "translucent",
+      "notes": "Opens a sentence; inherits the confidence of the previous one."
+    },
+    {
+      "glyph": "⬅️",
+      "class": "linker",
+      "en": "because",
+      "tr": "çünkü",
+      "layer": 0,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🔀",
+      "class": "linker",
+      "en": "but",
+      "tr": "ama",
+      "layer": 0,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "∧",
+      "class": "linker",
+      "en": "and",
+      "tr": "ve",
+      "layer": 0,
+      "transparency": "opaque",
+      "notes": "Math script. ➕ rejected: collides with arithmetic plus. OPEN: no emoji candidate yet."
+    },
+    {
+      "glyph": "∨",
+      "class": "linker",
+      "en": "or (inclusive)",
+      "tr": "veya",
+      "layer": 0,
+      "transparency": "opaque",
+      "notes": "Math script. Defined inclusive, which English never settled."
+    },
+    {
+      "glyph": "🔺",
+      "class": "linker",
+      "en": "if",
+      "tr": "eğer",
+      "layer": 0,
+      "transparency": "opaque",
+      "notes": "Opens the condition sentence; the consequence follows as the next sentence."
+    },
+    {
+      "glyph": "❌",
+      "class": "modifier",
+      "en": "not / no / false",
+      "tr": "değil / yok / yanlış",
+      "layer": 0,
+      "transparency": "transparent",
+      "notes": "Postfix. Ends a word and negates the whole word. Standing alone in the patient slot = 'the false'. Never use ❎ (renders green on some platforms)."
+    },
+    {
+      "glyph": "✅",
+      "class": "root",
+      "en": "true / yes",
+      "tr": "doğru / evet",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "TRUE"
+    },
+    {
+      "glyph": "🎲",
+      "class": "root",
+      "en": "maybe",
+      "tr": "belki",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "MAYBE"
+    },
+    {
+      "glyph": "💪",
+      "class": "root",
+      "en": "can",
+      "tr": "-ebilmek",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "CAN",
+      "notes": "💪❌ = cannot."
+    },
+    {
+      "glyph": "🙋",
+      "class": "root",
+      "en": "I",
+      "tr": "ben",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "I",
+      "notes": "🙋🙋 = we (reduplication = plural). As a trailing modifier = my: 🏠🙋 = my home."
+    },
+    {
+      "glyph": "🫵",
+      "class": "root",
+      "en": "you",
+      "tr": "sen",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "YOU"
+    },
+    {
+      "glyph": "👤",
+      "class": "root",
+      "en": "someone",
+      "tr": "biri",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "SOMEONE"
+    },
+    {
+      "glyph": "📦",
+      "class": "root",
+      "en": "something / thing",
+      "tr": "bir şey",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "SOMETHING"
+    },
+    {
+      "glyph": "👥",
+      "class": "root",
+      "en": "people",
+      "tr": "insanlar",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "PEOPLE"
+    },
+    {
+      "glyph": "🧍",
+      "class": "root",
+      "en": "body",
+      "tr": "beden",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "BODY"
+    },
+    {
+      "glyph": "👉",
+      "class": "root",
+      "en": "this / it / he / she (back-reference)",
+      "tr": "bu / o",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "THIS",
+      "notes": "One pronoun for he, she, it, this, that, as Turkish o. Points at a thing or at the whole previous sentence. When two referents compete, prefix a category glyph: 👤👉 the person, 📦👉 the thing, 🐾👉 the animal. Anything that recurs should be bound to a glyph with ≔ instead. Never gendered."
+    },
+    {
+      "glyph": "👈",
+      "class": "root",
+      "en": "other",
+      "tr": "öteki / diğer",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "OTHER",
+      "notes": "Not derivable from 🟰❌ (different): the other mouse can be identical. 👈🌕 = all others; X∧👈🌑 = only X."
+    },
+    {
+      "glyph": "🟰",
+      "class": "root",
+      "en": "same",
+      "tr": "aynı",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "SAME",
+      "notes": "🟰❌ = different."
+    },
+    {
+      "glyph": "🗂️",
+      "class": "root",
+      "en": "kind / type",
+      "tr": "tür",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "KIND"
+    },
+    {
+      "glyph": "🧩",
+      "class": "root",
+      "en": "part (of)",
+      "tr": "parça",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "PART",
+      "notes": "Two-place: 🧩 X Y = X is part of Y. Used backwards for 'have'."
+    },
+    {
+      "glyph": "🌑",
+      "class": "modifier",
+      "en": "none / no (quantity)",
+      "tr": "hiç",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "NOT (quantity)",
+      "notes": "Moon scale = proportions. 🌑 after a noun = zero of them."
+    },
+    {
+      "glyph": "🌘",
+      "class": "modifier",
+      "en": "a small part of",
+      "tr": "küçük bir kısmı",
+      "layer": 0,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🌗",
+      "class": "modifier",
+      "en": "half",
+      "tr": "yarısı",
+      "layer": 0,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🌔",
+      "class": "modifier",
+      "en": "most",
+      "tr": "çoğu",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "MUCH/MANY (proportional)"
+    },
+    {
+      "glyph": "🌕",
+      "class": "modifier",
+      "en": "all",
+      "tr": "hepsi",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "ALL",
+      "notes": "'Some' = 🌑❌ (not none), the actual existential quantifier."
+    },
+    {
+      "glyph": "👍",
+      "class": "modifier",
+      "en": "good",
+      "tr": "iyi",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "GOOD",
+      "notes": "👍📈 = better. ❤️👍 = happy."
+    },
+    {
+      "glyph": "👎",
+      "class": "modifier",
+      "en": "bad",
+      "tr": "kötü",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "BAD"
+    },
+    {
+      "glyph": "🐘",
+      "class": "modifier",
+      "en": "big",
+      "tr": "büyük",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "BIG",
+      "notes": "Means BIG, never elephant. 🕐🐘 long time, 📏🐘 far, 🧮🐘 many."
+    },
+    {
+      "glyph": "🐜",
+      "class": "modifier",
+      "en": "small",
+      "tr": "küçük",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "SMALL",
+      "notes": "Means SMALL, never ant."
+    },
+    {
+      "glyph": "📈",
+      "class": "modifier",
+      "en": "more / increase",
+      "tr": "daha / artış",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "MORE",
+      "notes": "🧠📈 learn. Standing first in a sentence it is the predicate 'grows'."
+    },
+    {
+      "glyph": "📉",
+      "class": "modifier",
+      "en": "less / decrease",
+      "tr": "daha az / azalış",
+      "layer": 0,
+      "transparency": "transparent",
+      "notes": "🧠📉 forget."
+    },
+    {
+      "glyph": "‼️",
+      "class": "modifier",
+      "en": "very",
+      "tr": "çok",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "VERY"
+    },
+    {
+      "glyph": "⬆️",
+      "class": "modifier",
+      "en": "above / up",
+      "tr": "üst / yukarı",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "ABOVE",
+      "notes": "Sentence-initial: predicate 'is above'."
+    },
+    {
+      "glyph": "⬇️",
+      "class": "modifier",
+      "en": "below / down",
+      "tr": "alt / aşağı",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "BELOW"
+    },
+    {
+      "glyph": "💭",
+      "class": "root",
+      "en": "think",
+      "tr": "düşünmek",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "THINK",
+      "notes": "Bubble = the process; 🧠 = what is stored."
+    },
+    {
+      "glyph": "🧠",
+      "class": "root",
+      "en": "know",
+      "tr": "bilmek",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "KNOW"
+    },
+    {
+      "glyph": "🎯",
+      "class": "root",
+      "en": "want",
+      "tr": "istemek",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "WANT"
+    },
+    {
+      "glyph": "❤️",
+      "class": "root",
+      "en": "feel",
+      "tr": "hissetmek",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "FEEL",
+      "notes": "Reads as 'love' cold: a near miss, tolerated. ❤️👍 happy, ❤️👎 sad."
+    },
+    {
+      "glyph": "👁️",
+      "class": "root",
+      "en": "see / eye",
+      "tr": "görmek / göz",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "SEE"
+    },
+    {
+      "glyph": "👂",
+      "class": "root",
+      "en": "hear / ear",
+      "tr": "duymak / kulak",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "HEAR"
+    },
+    {
+      "glyph": "🗣️",
+      "class": "root",
+      "en": "say",
+      "tr": "söylemek",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "SAY",
+      "notes": "In dialogue use the 💬 label instead. 🗣️❌ = does not say."
+    },
+    {
+      "glyph": "🤜",
+      "class": "root",
+      "en": "do",
+      "tr": "yapmak",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "DO",
+      "notes": "Hand = agency. 🤜🟰 = repeat (do same). 🤜👈 = other doings (stand-in for 'task')."
+    },
+    {
+      "glyph": "💥",
+      "class": "root",
+      "en": "happen",
+      "tr": "olmak",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "HAPPEN"
+    },
+    {
+      "glyph": "🏃",
+      "class": "root",
+      "en": "move",
+      "tr": "hareket etmek",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "MOVE",
+      "notes": "🏃⬆️ go up / jump, 🏃⬇️ go down / dive."
+    },
+    {
+      "glyph": "∃",
+      "class": "root",
+      "en": "there is / exists",
+      "tr": "var",
+      "layer": 0,
+      "transparency": "opaque",
+      "nsm": "THERE IS",
+      "notes": "Math script. No picture of existence is possible."
+    },
+    {
+      "glyph": "🌱",
+      "class": "root",
+      "en": "live",
+      "tr": "yaşamak",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "LIVE"
+    },
+    {
+      "glyph": "💀",
+      "class": "root",
+      "en": "die",
+      "tr": "ölmek",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "DIE",
+      "notes": "Flagged: slang reads it as 'dying laughing'. Literal reading holds in formal text."
+    },
+    {
+      "glyph": "🕐",
+      "class": "root",
+      "en": "time",
+      "tr": "zaman",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "TIME",
+      "notes": "🕐👉 now (also resets tense). 🕐🐘 long time, 🕐🐜 short time."
+    },
+    {
+      "glyph": "⏪",
+      "class": "root",
+      "en": "before / past",
+      "tr": "önce / geçmiş",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "BEFORE",
+      "notes": "Tense is sticky: ⏪🔷 alone sets the frame for everything after, until 🕐👉🔷 or ⏩🔷."
+    },
+    {
+      "glyph": "⏩",
+      "class": "root",
+      "en": "after / future",
+      "tr": "sonra / gelecek",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "AFTER"
+    },
+    {
+      "glyph": "📍",
+      "class": "root",
+      "en": "place",
+      "tr": "yer",
+      "layer": 0,
+      "transparency": "transparent",
+      "nsm": "WHERE/PLACE",
+      "notes": "📍👉 here, 📍⬆️ the place above."
+    },
+    {
+      "glyph": "📥",
+      "class": "root",
+      "en": "inside / in",
+      "tr": "içinde",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "INSIDE",
+      "notes": "Two-place: 📥 X Y = X is in Y."
+    },
+    {
+      "glyph": "📤",
+      "class": "root",
+      "en": "outside",
+      "tr": "dışında",
+      "layer": 0,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "↔️",
+      "class": "root",
+      "en": "side / beside",
+      "tr": "yan",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "SIDE"
+    },
+    {
+      "glyph": "📏",
+      "class": "root",
+      "en": "distance / length",
+      "tr": "uzaklık / uzunluk",
+      "layer": 1,
+      "transparency": "transparent",
+      "notes": "📏🐘 far, 📏🐜 near, 📏🌑 touching (zero distance)."
+    },
+    {
+      "glyph": "🪞",
+      "class": "root",
+      "en": "like / similar to",
+      "tr": "gibi",
+      "layer": 0,
+      "transparency": "translucent",
+      "nsm": "LIKE"
+    },
+    {
+      "glyph": "🧮",
+      "class": "root",
+      "en": "number / count",
+      "tr": "sayı",
+      "layer": 1,
+      "transparency": "translucent",
+      "notes": "🧮🐘 many (absolute), 🧮🐜 few. Moons are proportions, 🧮 is counts."
+    },
+    {
+      "glyph": "☀️",
+      "class": "root",
+      "en": "sun / day",
+      "tr": "güneş / gün",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🌃",
+      "class": "root",
+      "en": "night",
+      "tr": "gece",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "💧",
+      "class": "root",
+      "en": "water",
+      "tr": "su",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🔥",
+      "class": "root",
+      "en": "fire / hot",
+      "tr": "ateş / sıcak",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "❄️",
+      "class": "root",
+      "en": "ice / cold",
+      "tr": "buz / soğuk",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🪨",
+      "class": "root",
+      "en": "stone",
+      "tr": "taş",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🌍",
+      "class": "root",
+      "en": "world",
+      "tr": "dünya",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🌬️",
+      "class": "root",
+      "en": "air / wind",
+      "tr": "hava / rüzgâr",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "⛰️",
+      "class": "root",
+      "en": "mountain",
+      "tr": "dağ",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🌊",
+      "class": "root",
+      "en": "sea",
+      "tr": "deniz",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🌳",
+      "class": "root",
+      "en": "tree",
+      "tr": "ağaç",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🌿",
+      "class": "root",
+      "en": "plant",
+      "tr": "bitki",
+      "layer": 1,
+      "transparency": "transparent",
+      "notes": "Promoted: honest compound 📦🌱🏃❌ ran to 3+ glyphs."
+    },
+    {
+      "glyph": "🐾",
+      "class": "root",
+      "en": "animal",
+      "tr": "hayvan",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🐟",
+      "class": "root",
+      "en": "fish",
+      "tr": "balık",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🐦",
+      "class": "root",
+      "en": "bird",
+      "tr": "kuş",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🐭",
+      "class": "root",
+      "en": "mouse",
+      "tr": "fare",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🥚",
+      "class": "root",
+      "en": "egg",
+      "tr": "yumurta",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🦴",
+      "class": "root",
+      "en": "bone",
+      "tr": "kemik",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🩸",
+      "class": "root",
+      "en": "blood",
+      "tr": "kan",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🦠",
+      "class": "root",
+      "en": "disease / germ",
+      "tr": "hastalık / mikrop",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "👶",
+      "class": "root",
+      "en": "child",
+      "tr": "çocuk",
+      "layer": 1,
+      "transparency": "transparent",
+      "notes": "Only face allowed: meaning is not in the expression."
+    },
+    {
+      "glyph": "✋",
+      "class": "root",
+      "en": "hand",
+      "tr": "el",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🦶",
+      "class": "root",
+      "en": "foot",
+      "tr": "ayak",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "👄",
+      "class": "root",
+      "en": "mouth",
+      "tr": "ağız",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🦷",
+      "class": "root",
+      "en": "tooth",
+      "tr": "diş",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "👃",
+      "class": "root",
+      "en": "nose / smell",
+      "tr": "burun / koklamak",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🍽️",
+      "class": "root",
+      "en": "eat",
+      "tr": "yemek",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "💤",
+      "class": "root",
+      "en": "sleep",
+      "tr": "uyumak",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🎁",
+      "class": "root",
+      "en": "give",
+      "tr": "vermek",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🔨",
+      "class": "root",
+      "en": "make / build",
+      "tr": "yapmak / inşa etmek",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🔧",
+      "class": "root",
+      "en": "use / tool",
+      "tr": "kullanmak / araç",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "✂️",
+      "class": "root",
+      "en": "cut",
+      "tr": "kesmek",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🔗",
+      "class": "root",
+      "en": "join / relation",
+      "tr": "bağlamak / bağ",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🔍",
+      "class": "root",
+      "en": "search",
+      "tr": "aramak",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "📖",
+      "class": "root",
+      "en": "read",
+      "tr": "okumak",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "✍️",
+      "class": "root",
+      "en": "write",
+      "tr": "yazmak",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🔓",
+      "class": "root",
+      "en": "open",
+      "tr": "açmak",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🔒",
+      "class": "root",
+      "en": "close",
+      "tr": "kapatmak",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🐣",
+      "class": "root",
+      "en": "new / begin",
+      "tr": "yeni / başlamak",
+      "layer": 1,
+      "transparency": "translucent",
+      "notes": "Hatchling. 🗺️🐣 = a new model."
+    },
+    {
+      "glyph": "🏁",
+      "class": "root",
+      "en": "end / finish",
+      "tr": "bitmek / son",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🦋",
+      "class": "root",
+      "en": "change",
+      "tr": "değişmek",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🤝",
+      "class": "root",
+      "en": "agree",
+      "tr": "anlaşmak",
+      "layer": 1,
+      "transparency": "transparent",
+      "notes": "Rule 6: give a glyph the meaning people already read into it."
+    },
+    {
+      "glyph": "⚔️",
+      "class": "root",
+      "en": "oppose / fight",
+      "tr": "karşı çıkmak",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "⚖️",
+      "class": "root",
+      "en": "compare",
+      "tr": "karşılaştırmak",
+      "layer": 1,
+      "transparency": "translucent",
+      "notes": "⚖️🧮 = measure."
+    },
+    {
+      "glyph": "🏠",
+      "class": "root",
+      "en": "house / home",
+      "tr": "ev",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🛣️",
+      "class": "root",
+      "en": "path / method",
+      "tr": "yol / yöntem",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🍞",
+      "class": "root",
+      "en": "food",
+      "tr": "yiyecek",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "💰",
+      "class": "root",
+      "en": "money / cost",
+      "tr": "para / maliyet",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "⚙️",
+      "class": "root",
+      "en": "machine",
+      "tr": "makine",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "💻",
+      "class": "root",
+      "en": "computer",
+      "tr": "bilgisayar",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "⚡",
+      "class": "root",
+      "en": "energy / electricity",
+      "tr": "enerji / elektrik",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🔦",
+      "class": "root",
+      "en": "light",
+      "tr": "ışık",
+      "layer": 1,
+      "transparency": "translucent",
+      "notes": "💡 was taken by 'idea' (rule 6)."
+    },
+    {
+      "glyph": "🔊",
+      "class": "root",
+      "en": "sound",
+      "tr": "ses",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🎨",
+      "class": "root",
+      "en": "color",
+      "tr": "renk",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "💡",
+      "class": "root",
+      "en": "idea",
+      "tr": "fikir",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🗺️",
+      "class": "root",
+      "en": "model / map",
+      "tr": "model / harita",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🧪",
+      "class": "root",
+      "en": "experiment / test",
+      "tr": "deney",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "📊",
+      "class": "root",
+      "en": "data",
+      "tr": "veri",
+      "layer": 1,
+      "transparency": "transparent"
+    },
+    {
+      "glyph": "🧺",
+      "class": "root",
+      "en": "group / set",
+      "tr": "küme / grup",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🪜",
+      "class": "root",
+      "en": "order / level",
+      "tr": "sıra / düzey",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🐇",
+      "class": "root",
+      "en": "fast",
+      "tr": "hızlı",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🐢",
+      "class": "root",
+      "en": "slow",
+      "tr": "yavaş",
+      "layer": 1,
+      "transparency": "translucent"
+    },
+    {
+      "glyph": "🏆",
+      "class": "root",
+      "en": "best",
+      "tr": "en iyi",
+      "layer": 1,
+      "transparency": "transparent",
+      "notes": "Promoted from the abstract: 'better than all others' was a whole clause."
+    },
+    {
+      "glyph": "∥",
+      "class": "root",
+      "en": "parallel",
+      "tr": "paralel",
+      "layer": 1,
+      "transparency": "translucent",
+      "notes": "Math script."
+    }
+  ],
+  "compounds": [
+    {
+      "glyphs": "🙋🙋",
+      "en": "we",
+      "tr": "biz"
+    },
+    {
+      "glyphs": "🕐👉",
+      "en": "now (resets tense)",
+      "tr": "şimdi"
+    },
+    {
+      "glyphs": "📍👉",
+      "en": "here",
+      "tr": "burası"
+    },
+    {
+      "glyphs": "🟰❌",
+      "en": "different",
+      "tr": "farklı"
+    },
+    {
+      "glyphs": "🌑❌",
+      "en": "some (not none)",
+      "tr": "bazı"
+    },
+    {
+      "glyphs": "🧠📈",
+      "en": "learn",
+      "tr": "öğrenmek"
+    },
+    {
+      "glyphs": "🧠📉",
+      "en": "forget",
+      "tr": "unutmak"
+    },
+    {
+      "glyphs": "💪🧠📈",
+      "en": "learnability",
+      "tr": "öğrenilebilirlik"
+    },
+    {
+      "glyphs": "💭✅",
+      "en": "believe",
+      "tr": "inanmak"
+    },
+    {
+      "glyphs": "❤️👍",
+      "en": "happy",
+      "tr": "mutlu"
+    },
+    {
+      "glyphs": "❤️👎",
+      "en": "sad",
+      "tr": "üzgün"
+    },
+    {
+      "glyphs": "👍📈",
+      "en": "better",
+      "tr": "daha iyi"
+    },
+    {
+      "glyphs": "🤜🟰",
+      "en": "repeat",
+      "tr": "tekrarlamak"
+    },
+    {
+      "glyphs": "⚖️🧮",
+      "en": "measure",
+      "tr": "ölçmek"
+    },
+    {
+      "glyphs": "🧩🌕",
+      "en": "whole",
+      "tr": "bütün"
+    },
+    {
+      "glyphs": "🕐🐘",
+      "en": "long time",
+      "tr": "uzun süre"
+    },
+    {
+      "glyphs": "🕐🐜",
+      "en": "short time",
+      "tr": "kısa süre"
+    },
+    {
+      "glyphs": "📏🐘",
+      "en": "far",
+      "tr": "uzak"
+    },
+    {
+      "glyphs": "📏🐜",
+      "en": "near",
+      "tr": "yakın"
+    },
+    {
+      "glyphs": "📏🌑",
+      "en": "touching",
+      "tr": "temas"
+    },
+    {
+      "glyphs": "🧮🐘",
+      "en": "many",
+      "tr": "çok (sayıca)"
+    },
+    {
+      "glyphs": "🧮🐜",
+      "en": "few",
+      "tr": "az (sayıca)"
+    },
+    {
+      "glyphs": "🏃⬆️",
+      "en": "go up / jump",
+      "tr": "yukarı çıkmak / zıplamak"
+    },
+    {
+      "glyphs": "🏃⬇️",
+      "en": "go down / dive",
+      "tr": "aşağı inmek / dalmak"
+    },
+    {
+      "glyphs": "👈🌕",
+      "en": "all others",
+      "tr": "diğerlerinin hepsi"
+    },
+    {
+      "glyphs": "🤜👈",
+      "en": "other doings / tasks",
+      "tr": "başka işler"
+    },
+    {
+      "glyphs": "💬🦋",
+      "en": "translation (words change)",
+      "tr": "çeviri"
+    },
+    {
+      "glyphs": "📖⚙️",
+      "en": "encoder (reading machine)",
+      "tr": "kodlayıcı"
+    },
+    {
+      "glyphs": "✍️⚙️",
+      "en": "decoder (writing machine)",
+      "tr": "kod çözücü"
+    },
+    {
+      "glyphs": "🧺🗺️",
+      "en": "ensemble (group of models)",
+      "tr": "topluluk modeli"
+    },
+    {
+      "glyphs": "✂️🌳",
+      "en": "parsing (cutting trees)",
+      "tr": "ayrıştırma"
+    },
+    {
+      "glyphs": "🧠📈📜",
+      "en": "learning (the idea of)",
+      "tr": "öğrenme"
+    },
+    {
+      "glyphs": "🗺️🐣",
+      "en": "new model",
+      "tr": "yeni model"
+    }
+  ]
+}

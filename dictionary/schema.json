@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Semagram dictionary",
+  "description": "Shape of dictionary/core.json and dictionary/packs/*.json. The invariants are enforced without a dependency by tests/test_semagram.py::test_dictionary_shape; this file exists so editors can validate and complete entries.",
+  "type": "object",
+  "required": ["entries"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "version": {"type": "string", "description": "Stamped into every synth record as lang.dict_version."},
+    "name": {"type": "string", "description": "Pack name; matches the filename and the `# pack:` line."},
+    "description": {"type": "string"},
+    "note": {"type": "string"},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["glyph", "class", "en", "tr", "layer", "transparency"],
+        "additionalProperties": false,
+        "properties": {
+          "glyph": {
+            "type": "string",
+            "minLength": 1,
+            "description": "One glyph, with or without a variation selector; compared normalized, so 🏷 and 🏷️ collide."
+          },
+          "class": {
+            "enum": ["root", "particle", "linker", "modifier"],
+            "description": "Pictures are content (root), shapes are grammar (the rest). Design rule 4."
+          },
+          "en": {"type": "string", "minLength": 1, "description": "Slash-separated alternates; the first wins in the encoder. A [bracketed] gloss is grammar, not a word, and is skipped by the reverse index."},
+          "tr": {"type": "string", "minLength": 1},
+          "layer": {
+            "enum": [0, 1, 2],
+            "description": "0 = NSM semantic prime, 1 = core root, 2 = domain pack."
+          },
+          "transparency": {
+            "enum": ["transparent", "translucent", "opaque", "bound"],
+            "description": "Design rule: content roots must be translucent or better; opaque is capped to grammar particles. 'bound' is reserved for runtime ≔ bindings and does not appear on disk."
+          },
+          "notes": {"type": "string"},
+          "nsm": {"type": "string", "description": "The Layer 0 expression this root abbreviates."}
+        }
+      }
+    },
+    "compounds": {
+      "type": "array",
+      "description": "Declared multi-glyph words. Under the no-break rule a reader can only segment what is already declared, so free compounding does not exist.",
+      "items": {
+        "type": "object",
+        "required": ["glyphs", "en"],
+        "additionalProperties": false,
+        "properties": {
+          "glyphs": {"type": "string", "minLength": 1, "description": "Head first. At most 3 roots, modifiers not counted."},
+          "en": {"type": "string", "minLength": 1},
+          "tr": {"type": "string"},
+          "layer": {"enum": [0, 1, 2]}
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

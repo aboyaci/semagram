@@ -1,0 +1,17 @@
+{
+  "name": "attention",
+  "description": "Layer 2 domain pack for 'Attention Is All You Need' (Vaswani et al., 2017). Declared per document with ≔; nothing here is core vocabulary.",
+  "entries": [
+    {"glyph": "🤖", "class": "root", "en": "Transformer", "tr": "Transformer", "layer": 2, "transparency": "translucent", "notes": "🤖 ≔ 🏷️Transformer"},
+    {"glyph": "👀", "class": "root", "en": "attention", "tr": "dikkat (mekanizması)", "layer": 2, "transparency": "transparent"},
+    {"glyph": "🔁", "class": "root", "en": "recurrence / RNN", "tr": "yineleme / RNN", "layer": 2, "transparency": "translucent"},
+    {"glyph": "🪟", "class": "root", "en": "convolution", "tr": "evrişim", "layer": 2, "transparency": "translucent", "notes": "A sliding window."}
+  ],
+  "compounds": [
+    {"glyphs": "🏷️BLEU", "en": "BLEU score", "tr": "BLEU puanı"},
+    {"glyphs": "🏷️GPU", "en": "GPU", "tr": "GPU"},
+    {"glyphs": "🏷️EN", "en": "English", "tr": "İngilizce"},
+    {"glyphs": "🏷️DE", "en": "German", "tr": "Almanca"},
+    {"glyphs": "🏷️FR", "en": "French", "tr": "Fransızca"}
+  ]
+}
