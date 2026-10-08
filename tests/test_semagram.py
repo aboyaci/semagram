@@ -130,16 +130,6 @@ def test_names_and_bindings():
     assert any("bind" in p for p in lint("👁️👤🏷️Ali👤🏷️Ali🔷👁️👤🏷️Ali🔷", d))
 
 
-def test_pipeline_with_stub():
-    from tools.llm import LLM
-    from tools.synth import roundtrip
-    llm = LLM("stub")
-    llm.stub_responses = ["👁️🐟🐦➕🐭", "👁️🐟🐦∧🐭🔷", "The fish sees the bird and the mouse.",
-                          '{"claims":[{"claim":"fish sees bird and mouse","status":"kept"}],"style_lost":"","verdict":"keep"}']
-    r = roundtrip("The fish sees the bird and the mouse.", llm, Dictionary.load([]))
-    assert r["attempts"] == 2 and r["errors"] == [] and r["judge"]["verdict"] == "keep"
-
-
 def test_dictionary_shape():
     """Enforce dictionary/schema.json without taking a dependency on a validator."""
     import json

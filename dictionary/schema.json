@@ -6,7 +6,7 @@
   "required": ["entries"],
   "properties": {
     "$schema": {"type": "string"},
-    "version": {"type": "string", "description": "Stamped into every synth record as lang.dict_version."},
+    "version": {"type": "string", "description": "Bumped when the dictionary changes in a way that invalidates earlier translations."},
     "name": {"type": "string", "description": "Pack name; matches the filename and the `# pack:` line."},
     "description": {"type": "string"},
     "note": {"type": "string"},

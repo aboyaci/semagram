@@ -2,5 +2,3 @@ __pycache__/
 .pytest_cache/
 *.pyc
 .DS_Store
-# synth output: generated corpora, reject logs and gaps reports
-data/

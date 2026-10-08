@@ -37,8 +37,7 @@ It is not a universal language and nobody should learn to speak it. The realisti
 | [`docs/grammar.md`](docs/grammar.md) | The grammar, in full |
 | [`docs/design-rules.md`](docs/design-rules.md) | The seven rules every glyph and compound must pass |
 | [`docs/history.md`](docs/history.md) | Decision log: what was tried, what broke, what replaced it |
-| [`tools/`](tools/) | LLM pipeline, used as a measuring instrument: English → Semagram with the linter in the loop, back-translation, claim-level judge, and a gaps report that is the frequency evidence vocabulary grows from. Anthropic, any OpenAI-compatible local server, or offline stub |
-| [`docs/translator-pipeline.md`](docs/translator-pipeline.md) | How the LLM pipeline works, and why training a model is not the current plan |
+| [`docs/llm-pipeline.md`](docs/llm-pipeline.md) | Future work: the machine-translation pipeline, why it is not the current plan, and what a resumption would need |
 | [`docs/ste100.md`](docs/ste100.md) | How much of ASD-STE100 Simplified Technical English this covers |
 | [`docs/open-problems.md`](docs/open-problems.md) | What is unsolved |
 | [`examples/`](examples/) | The fish and bird story; the abstract of *Attention Is All You Need* |
@@ -57,17 +56,7 @@ python3 -m semagram dict --pack attention > DICTIONARY.md
 python3 -m pytest tests
 ```
 
-The encoder is a word-by-word dictionary lookup. It will not reorder English for you: write the predicate first yourself. The real translator is in `tools/`:
-
-```sh
-export ANTHROPIC_API_KEY=...
-python3 tools/synth.py translate --to sem "Not all mice sleep."      # 💤🐭🌕❌🔷
-python3 tools/synth.py translate --to tr examples/fish-and-bird.sem
-python3 tools/synth.py roundtrip "The Transformer uses attention and nothing else."
-python3 tools/synth.py synth corpus.txt --out data/pairs.jsonl       # training data + gaps report
-```
-
-Set `SEMAGRAM_PROVIDER=openai SEMAGRAM_BASE_URL=http://localhost:11434/v1 SEMAGRAM_MODEL=...` for a local model. See `docs/translator-pipeline.md`.
+The encoder is a word-by-word dictionary lookup. It will not reorder English for you: write the predicate first yourself. There is no machine translator here, by choice: a prototype existed and was set aside until the language stops moving. The design and the reasoning are in [docs/llm-pipeline.md](docs/llm-pipeline.md).
 
 A document declares its pack with a comment line `# pack: attention`. Lines starting with `#` are comments.
 
@@ -79,7 +68,7 @@ v0.3. Two texts translate and lint clean. The grammar has stabilized across the 
 
 Two licences, because there are two different things here.
 
-- **Code** — `semagram/`, `tools/`, `tests/` — is [MIT](LICENSE).
+- **Code** — `semagram/` and `tests/` — is [MIT](LICENSE).
 - **The language** — `docs/`, `dictionary/`, `DICTIONARY.md`, `examples/` — is [CC BY 4.0](LICENSE-CC-BY-4.0.txt). Attribute as: *Semagram, by Ali Boyaci*, with a link back.
 
 **Using the language needs no permission from anyone.** Copyright covers expression, not systems: the prose of `docs/grammar.md` and the wording of the glosses are licensed, the grammar and vocabulary themselves are not licensable. So writing a document in Semagram, teaching it, implementing a parser, or shipping a one-page legend in a book or paper carries no obligation under either licence. The CC BY term applies only if you copy or adapt the documentation and dictionary text itself.

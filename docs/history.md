@@ -81,3 +81,9 @@ Dictionary as data with generated Markdown, a glosser/linter that encodes the se
 ## 19. The LLM pipeline
 
 `tools/`: a dependency-free LLM client (Anthropic, any OpenAI-compatible local server, or an offline stub), a prompt built from the repository itself (grammar.md + generated dictionary + the two examples, about 4.7k tokens), and a pipeline: English → Semagram with the linter in the loop → back-translation → an LLM judge that lists each claim as kept, lost or contradicted. Kept pairs become training data for a small model; every `# gaps:` word the model asks for and every lint error are counted, which is the frequency evidence the vocabulary was always supposed to grow from. `vocab` exports every glyph as an added token so a byte-level tokenizer does not have to re-learn that 🐭 is one unit.
+
+## 20. The pipeline set aside
+
+The pipeline of §19 worked, and was then taken out of the tree and recorded as future work ([llm-pipeline.md](llm-pipeline.md); the code is at the git tag `llm-pipeline-prototype`). The argument is one of ordering, not of value. The cold-reader test in [open-problems.md](open-problems.md) #1 settles the no-break decision of §16; that decision fixes segmentation, segmentation fixes the tokenizer, and so a corpus generated now is a bet on an experiment nobody has run. Training would also freeze a grammar that this log shows has not stopped moving.
+
+Two findings from the attempt survive it. The system prompt built from the repository means the grammar docs *are* the model's specification, which is the right dependency direction and worth keeping in any successor. And any generated record needs a stamp of the dictionary version and grammar hash, because the prompt is rebuilt per call: without it there is no way to tell a stale pair from a current one. **Finding: the measuring instrument was more valuable than the translator, and the language is not finished enough to be worth freezing into weights.**
